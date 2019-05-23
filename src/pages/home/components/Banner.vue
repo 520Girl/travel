@@ -16,10 +16,10 @@ export default {
   data() {
     return {
       swiperOption: {
-        loop: true,
         pagination: '.swiper-pagination',
         nextButton: ".swiper-button-next", //前进按钮的css选择器或HTML元素。
         prevButton: ".swiper-button-prev",//后退按钮的css选择器或HTML元素。
+        loop: true,
       },
       swiperList: [{
         id: '001',

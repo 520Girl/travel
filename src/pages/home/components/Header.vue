@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header clearFix">
     <div class="header-left iconfont icon-xiajiantou1 "></div>
     <div class="header-search iconfont icon-sousuo">
       <span>输入城市/景点/游玩主题</span>
@@ -14,6 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "~styles/varibles.scss";
+@import "~styles/mixin.scss";
 .header {
   width: 100%;
   line-height: 0.86rem;

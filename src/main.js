@@ -8,6 +8,7 @@ import 'styles/border.css' // 一像素解决方案
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
+
 Vue.config.productionTip = false
 fastClick.attach(document.body); // 将这个方法绑,正确的使用fastclick
 Vue.use(VueAwesomeSwiper)
