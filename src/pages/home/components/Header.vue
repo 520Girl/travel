@@ -20,6 +20,7 @@ export default {
   color: #ffffff;
   display: flex;
   background: $bgColor;
+  font-size: 14px;
   .header-left {
     float: left;
     width: 0.64rem;
