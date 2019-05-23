@@ -20,7 +20,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-xiajiantou:before {
+.icon-zuojiantou:before {
+  content: "\e731";
+}
+
+.icon-xiajiantou::after {
   content: "\e600";
 }
 

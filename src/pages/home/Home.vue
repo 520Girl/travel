@@ -1,14 +1,15 @@
 <template>
   <div>
-    <h1>这是h1标签</h1>
-    <h1>这是h1标签</h1>
-    <h1>这是h1标签</h1>
-    <a href="">this a标签</a>
+    <home-header></home-header>
   </div>
 </template>
 <script>
+import HomeHeader from './components/Header'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeHeader
+  }
 }
 </script>
 <style lang="scss" scoped>
