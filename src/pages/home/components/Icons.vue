@@ -16,6 +16,9 @@
 <script>
 export default {
   name: "HomeIcons",
+  props: {
+    iconList: Array
+  },
   data() {
     return {
       swiperIcons: {
@@ -70,7 +73,7 @@ export default {
   computed: {
     pages() {
       const pages = []
-      this.iconsList.forEach((item, index) => {
+      this.iconList.forEach((item, index) => {
         const indexs = Math.floor(index / 8);
         if (!pages[indexs]) { //只是为了判断是否为数组
           pages[indexs] = []

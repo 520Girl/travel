@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showBanner">
       <swiper-slide v-for="item of swiperList" :key="item.id">
         <img class="banner-img" :src="item.imgUrl" alt="" srcset="">
       </swiper-slide>
@@ -13,6 +13,9 @@
 <script>
 export default {
   name: "HomeBanner",
+  props: {
+    swiperList: Array
+  },
   data() {
     return {
       swiperOption: {
@@ -27,7 +30,7 @@ export default {
         },
         speed: 5000,
       },
-      swiperList: [{
+      swiperLists: [{
         id: '001',
         imgUrl: "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/b23a39921e8b78f38b61412d691d93ea.jpg_750x200_942ed7bd.jpg"
       }, {
@@ -41,6 +44,11 @@ export default {
         imgUrl: "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
       }]
     }
+  },
+  computed: {
+    showBanner() {
+      return this.swiperList.length
+    }
   }
 }
 </script>
@@ -49,11 +57,10 @@ export default {
   background-color: #ffffff !important;
 }
 .wrapper {
-  overflow: hidden;
-  width: 100%;
   padding-bottom: 26.6%;
   height: 0;
   background: #cccccc;
+  margin-bottom: 0.2rem;
   .banner-img {
     width: 100%;
   }
