@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper border-bottom">
     <ul class="icons clearFix">
       <swiper :options="swiperIcons">
         <swiper-slide v-for="(page,index) of pages" :key="index">
@@ -85,15 +85,15 @@ export default {
 <style lang="scss" scoped>
 @import "~styles/mixin.scss";
 .icons /deep/ .swiper-container {
-  height: 0;
-  padding-bottom: 50%;
+  // height: 0;
+  // padding-bottom: 50%;
+  height: 3.7rem;
 }
 .wrapper {
   overflow: hidden;
   width: 100%;
   color: #cccccc;
-  margin: 0.1rem 0;
-  border-bottom: 1px solid #ccc;
+  padding-top: 0.2rem;
   .icons {
     padding: 0.05rem;
     li {

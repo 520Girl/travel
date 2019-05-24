@@ -1,11 +1,13 @@
 @charset "utf-8";
 
+/* 
+//这个是加在pc端
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   -webkit-box-sizing: border-box;
-}
+} */
 
 html {
   background-color: #fff;

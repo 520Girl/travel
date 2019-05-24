@@ -20,6 +20,12 @@ export default {
         nextButton: ".swiper-button-next", //前进按钮的css选择器或HTML元素。
         prevButton: ".swiper-button-prev",//后退按钮的css选择器或HTML元素。
         loop: true,
+        autoplay: {
+          delay: 8000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true,
+        },
+        speed: 5000,
       },
       swiperList: [{
         id: '001',
