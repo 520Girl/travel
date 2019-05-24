@@ -4,7 +4,9 @@
     <div class="header-search iconfont icon-sousuo">
       <span>输入城市/景点/游玩主题</span>
     </div>
-    <div class="header-right iconfont icon-xiajiantou">{{this.city}}</div>
+    <router-link to="/city">
+      <div class="header-right iconfont icon-xiajiantou">{{this.city}}</div>
+    </router-link>
   </div>
 </template>
 <script>
@@ -20,7 +22,7 @@ export default {
 @import "~styles/mixin.scss";
 .header {
   width: 100%;
-  line-height: 0.86rem;
+  line-height: $headerHeight;
   color: #ffffff;
   display: flex;
   background: $bgColor;
@@ -48,6 +50,7 @@ export default {
     float: right;
     width: 1.24rem;
     text-align: center;
+    color: #ffffff;
   }
 }
 </style>
