@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper clearFix">
     <div class="recommend-title">热销推荐</div>
-    <div class="recommend-content border-bottom" v-for="item of recommendList" :key="item.id">
+
+    <router-link class="recommend-content border-bottom" v-for="item of recommendList" :key="item.id" tag="div" :to="'/detail/'+ item.id">
       <div class="recommend-left">
         <img :src="item.imgUrl" alt="">
       </div>
@@ -14,12 +15,13 @@
             <p><span>{{item.desc}}</span>浪漫的主体公园</p>
           </li>
           <li class="right-price">
-            <span>¥<em>{{item.price}}</em></span>起
+            <span>¥<em>100</em></span>起
           </li>
           <li class="right-button"><button>查看详情</button></li>
         </ul>
       </div>
-    </div>
+    </router-link>
+
   </div>
 </template>
 <script>
@@ -89,6 +91,7 @@ export default {
     width: 100%;
     padding: 0.1rem;
     display: inline-block;
+
     .recommend-left {
       padding-left: 0.1rem;
       float: left;
@@ -105,13 +108,13 @@ export default {
         line-height: 0.44rem;
         margin-top: 0.26rem;
         font-weight: 700;
-        overflow: hidden;
         @extend .ellipsis;
       }
-      .right-syno {
+      .right-syno p {
         padding-top: 0.1rem;
         color: #616161;
         font-size: 14px;
+        @extend .ellipsis;
         span {
           padding-right: 0.2rem;
         }
