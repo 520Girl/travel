@@ -40,7 +40,10 @@ export default {
     }
   },
   activated() { //因为我们使用了keep-alive 才有的
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll) //这是一个全局的window对象 全部主键有效果
+  },
+  deactivated() { //解绑 网页裂开时
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
