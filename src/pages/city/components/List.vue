@@ -5,14 +5,14 @@
         <div class="title border-topbottom">你的位置</div>
         <div class="list-button">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.curentCity}}</div>
           </div>
         </div>
       </div>
       <div class="hotcity ">
         <div class="title border-topbottom">热门城市</div>
         <div class="list-button">
-          <div class="button-wrapper " v-for="item of hotCities" :key="item.id">
+          <div class="button-wrapper " v-for="item of hotCities" :key="item.id" @click="handleCityClick(item.name)">
             <div class="button">{{item.name}}</div>
           </div>
         </div>
@@ -22,7 +22,7 @@
           <div class="title border-topbottom">{{key}}</div>
           <div class="item-list">
             <ul class="item">
-              <li class="border-bottom" v-for="innerItem in item" :key="innerItem.id">{{innerItem.name}}</li>
+              <li class="border-bottom" v-for="innerItem in item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">{{innerItem.name}}</li>
             </ul>
           </div>
         </div>
@@ -32,12 +32,26 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import { mapState, mapMutations } from 'vuex'
 export default {
   name: "CityList",
+  computed: {
+    ...mapState({
+      'curentCity': 'city'
+    })
+  },
   props: {
     hotCities: Array,
     cities: Object,
     letter: String
+  },
+  methods: {
+    handleCityClick(city) {
+      //this.$store.dispatch('changeCity', city)//改为 //排发一个changecity的active,然后了把city传过去
+      this.changeCity(city)
+      this.$router.push('/')//页面的挑战
+    },
+    ...mapMutations(['changeCity'])
   },
   mounted() {
     this.scroll = new Bscroll(this.$refs.wrapper)

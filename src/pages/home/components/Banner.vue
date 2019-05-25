@@ -57,11 +57,12 @@ export default {
   background-color: #ffffff !important;
 }
 .wrapper {
-  padding-bottom: 26.6%;
+  padding-bottom: 28%; //宽度塌陷
   height: 0;
   background: #cccccc;
   margin-bottom: 0.2rem;
   .banner-img {
+    overflow: hidden;
     width: 100%;
   }
 }

@@ -5,18 +5,21 @@
       <span>输入城市/景点/游玩主题</span>
     </div>
     <router-link to="/city">
-      <div class="header-right iconfont icon-xiajiantou">{{this.city}}</div>
+      <div class="header-right iconfont icon-xiajiantou"><span>{{this.doubleCity}}</span></div>
     </router-link>
   </div>
 </template>
 <script>
+import { mapState, mapGetters } from 'vuex'  //使用vuex提供的映射功能简化代码
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
-  },
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
+  }
 }
 </script>
+
 <style lang="scss" scoped>
 @import "~styles/varibles.scss";
 @import "~styles/mixin.scss";
@@ -48,9 +51,13 @@ export default {
   }
   .header-right {
     float: right;
-    width: 1.24rem;
+    min-width: 1.04rem;
+    padding: 0 0.1rem;
     text-align: center;
     color: #ffffff;
+    span {
+      padding-left: 0.08rem;
+    }
   }
 }
 </style>

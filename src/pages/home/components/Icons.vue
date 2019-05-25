@@ -98,6 +98,7 @@ export default {
   color: #cccccc;
   padding-top: 0.2rem;
   .icons {
+    overflow: hidden;
     padding: 0.05rem;
     li {
       float: left;
