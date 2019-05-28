@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     getCityInfo() {
-      axios.get('/api/city.json')
+      axios.get('https://www.easy-mock.com/mock/5cdaefc69387176d944d7b5b/example/api/city.json')
         .then(this.handleGetCityInfoSucc)
     },
     handleGetCityInfoSucc(res) {

@@ -12,9 +12,9 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: { //配置api 自动转发到当前端口上
       '/api': { //当请求api 这个目录上
-        target: "http://localhost:8080", //转发到这个地址
+        target: "https://www.easy-mock.com", //转发到这个地址
         pathRewrite: {
-          '^/api': '/static/mock' //当访问api时 就访问/static/mock
+          '^/api': '/mock/5cdaefc69387176d944d7b5b/example/api' //当访问api时 就访问/static/mock
         }
       }
     },

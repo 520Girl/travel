@@ -8,7 +8,7 @@
             <p><span>7865条评论</span><span>3条攻略</span></p>
           </div>
           <div>
-            <span class="icon">111</span>
+            <span class=" iconfont icon-zuojiantou1"></span>
           </div>
         </div>
         <div class="evaluate-right border-bottom">
@@ -17,14 +17,14 @@
             <p><span>开发时间</span><span>贴士</span></p>
           </div>
           <div>
-            <span class="icon">111</span>
+            <span class=" iconfont icon-zuojiantou1"></span>
           </div>
         </div>
       </div>
       <div class="bottom-address">
-        <span class="icon-left">111</span>
+        <span class=" icon-left iconfont icon-tubiaozhizuomoban"></span>
         <span class="address">广东省深圳市盐田区大梅沙东部华侨城</span>
-        <span class="icon-right">11</span>
+        <span class=" icon-right iconfont icon-zuojiantou1"></span>
       </div>
     </div>
   </div>
@@ -127,12 +127,11 @@ export default {
     width: 100%;
 
     .icon-left {
-      font-size: 0.44rem;
+      font-size: 0.5rem;
     }
     .address {
       color: #212121;
       font-size: 0.28rem;
-      margin: 0 0.45rem;
     }
     .icon-right {
       font-size: 0.44rem;

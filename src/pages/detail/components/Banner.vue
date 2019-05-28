@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="banner" @click="handleBannerCilck">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_600x330_1108fbd3.jpg" alt="">
+      <img class="banner-img" :src="bannerImg" alt="">
       <div class="banner-info">
-        <span class="info-number iconfont icon-xiajiantou">39</span>
-        <div class="info-title">东部华侨城大侠谷</div>
+        <span class="info-number iconfont icon-tupian">39</span>
+        <div class="info-title">{{this.sightName}}</div>
       </div>
     </div>
     <fade-animation>
-      <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallayClose"></common-gallary>
+      <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallayClose"></common-gallary>
     </fade-animation>
 
   </div>
@@ -23,10 +23,15 @@ export default {
     CommonGallary,
     FadeAnimation
   },
+  props: {
+    sightName: String,
+    bannerImg: String,
+    gallaryImgs: Array,
+  },
   data() {
     return {
       showGallary: false,
-      imgs: ['http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg', 'http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg']
+      //imgs: ['http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg', 'http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg']
     }
   },
   methods: {

@@ -1,11 +1,11 @@
 <template>
   <div class="header clearFix">
-    <div class="header-left iconfont icon-xiajiantou1 "></div>
+    <div class="header-left iconfont icon-zuojiantou"></div>
     <div class="header-search iconfont icon-sousuo">
       <span>输入城市/景点/游玩主题</span>
     </div>
     <router-link to="/city">
-      <div class="header-right iconfont icon-xiajiantou"><span>{{this.doubleCity}}</span></div>
+      <div class="header-right"><span class=" iconfont icon-xiajiantou">{{this.doubleCity}}</span></div>
     </router-link>
   </div>
 </template>

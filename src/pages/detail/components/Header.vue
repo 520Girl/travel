@@ -1,11 +1,11 @@
 <template>
   <div class="header">
     <router-link tag="div" to="/" class="header-abs " v-show="showAbs">
-      <span class="iconfont icon-xiajiantou1 abs-icon"></span>
+      <span class="iconfont icon-zuojiantou abs-icon"></span>
     </router-link>
     <div class="header-flxed" v-show="!showAbs" :style="opacityStyle">
       <router-link to="/">
-        <span class="iconfont icon-xiajiantou1 flxed-icon"></span>
+        <span class="iconfont icon-zuojiantou flxed-icon"></span>
       </router-link>
       <span>景点详情</span>
     </div>

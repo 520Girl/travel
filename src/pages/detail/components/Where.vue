@@ -2,24 +2,27 @@
   <div class="where">
     <div class="where-bottom">
       <div class="bottom-title border-bottom">
-        <span class="iconfont icon-xiajiantou">111</span>
+        <span class="iconfont icon-wanxia-"></span>
         <span>去哪儿推荐</span>
       </div>
       <div class="bottom-content border-bottom">
         <ul class="content-left">
           <li>
-            <h5 class="iconfont icon-xiajiantou left-title ">【直销】东部华侨城大侠谷成人票</h5>
+            <h5 class="iconfont icon-tourism left-title ">{{this.saletitle}}</h5>
             <p class="left-condition">23:59之前可预订到明日</p>
             <p class="left-info">
-              <span>自营</span>
-              <span>无需条件</span>
-              <span>条件退</span>
+              <span class="iconfont icon-caigouziying"></span>
+              <span class="border">自营</span>
+              <span class="iconfont icon-yichangtiaojianshezhi"></span>
+              <span class="border">无需条件</span>
+              <span class="iconfont icon-tuikuan"></span>
+              <span class="border">条件退</span>
             </p>
           </li>
         </ul>
         <ul class="content-right ">
-          <li><strong>¥</strong><span>180</span></li>
-          <li class="button">预订</li>
+          <li><strong>¥</strong><span>500</span></li>
+          <li class="button">全票预订</li>
         </ul>
       </div>
     </div>
@@ -30,6 +33,10 @@
 
 export default {
   name: "DetailWhere",
+  props: {
+    saleprice: String,
+    saletitle: String
+  },
   components: {
 
   }
@@ -37,6 +44,14 @@ export default {
 }
 </script>
 <style lang="scss"  scoped>
+.border {
+  &::after {
+    color: #a5e4ec;
+  }
+  &::before {
+    color: #a5e4ec;
+  }
+}
 .where-bottom {
   width: 100%;
   color: #212122;
@@ -45,8 +60,9 @@ export default {
   .bottom-title {
     background: #fff;
     span:first-child {
-      padding-right: 0.4rem;
-      font-size: 0.32rem;
+      padding: 0 0.1rem;
+      font-size: 0.4rem;
+      color: red;
     }
     span:last-child {
       font-size: 0.32rem;
@@ -76,8 +92,11 @@ export default {
         border-color: #a5e4ec;
         border-radius: 0.08rem;
         line-height: 0.3rem;
-        span {
-          padding-right: 0.1rem;
+        span:nth-of-type(2n) {
+        }
+        .iconfont {
+          font-size: 0.1rem;
+          padding-right: 0.05rem;
         }
       }
     }
@@ -91,8 +110,9 @@ export default {
         padding-left: 0.4rem;
       }
       span {
-        font-size: 0.44rem;
+        font-size: 0.4rem;
         font-weight: 700;
+        padding-right: 0.15rem;
       }
       .button {
         height: 0.6rem;
@@ -101,8 +121,9 @@ export default {
         font-size: 0.28rem;
         line-height: 0.6rem;
         border-radius: 0.08rem;
+        transform: translate(50%);
+        left: 0.2rem;
         position: absolute;
-        transform: translateX(50%);
         background: #ffab1e;
       }
     }
