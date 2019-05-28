@@ -9,6 +9,11 @@ export default {
   name: "DetailList",
   props: {
     list: Array
+  },
+  methods: {
+
+  }, mounted() {
+
   }
 
 }
