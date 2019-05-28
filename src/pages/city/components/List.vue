@@ -43,12 +43,12 @@ export default {
   props: {
     hotCities: Array,
     cities: Object,
-    letter: String
+    letter: String //这是通过alhabet通过city父组件传过来的值
   },
   methods: {
     handleCityClick(city) {
-      //this.$store.dispatch('changeCity', city)//改为 //排发一个changecity的active,然后了把city传过去
-      this.changeCity(city)
+      //this.$store.commit('changeCity', city)//改为 //排发一个changecity的方法给 Mutations,然后了把city传过去 vuex
+      this.changeCity(city)//changeCity是在vuex中的actions中的方法
       this.$router.push('/')//页面的挑战
     },
     ...mapMutations(['changeCity'])
@@ -57,11 +57,11 @@ export default {
     this.scroll = new Bscroll(this.$refs.wrapper)
   },
   watch: {
-    letter() {
+    letter() { //监听letter的改变
       if (this.letter) {
         const element = this.$refs[this.letter][0]
         //console.log(element)
-        this.scroll.scrollToElement(element)//这是better-scroll 内置的方法 ,传入的是斗米元素
+        this.scroll.scrollToElement(element)//这是better-scroll 内置的方法 ,传入的是dom元素,自动滚到指定的位置
       }
     }
   }

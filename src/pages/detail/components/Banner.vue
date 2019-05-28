@@ -7,16 +7,21 @@
         <div class="info-title">东部华侨城大侠谷</div>
       </div>
     </div>
-    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallayClose"></common-gallary>
+    <fade-animation>
+      <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallayClose"></common-gallary>
+    </fade-animation>
+
   </div>
 </template>
  
 <script>
-import CommonGallary from 'common/gallary/Gallary'
+import CommonGallary from 'common/gallary/Gallary' //轮播组件
+import FadeAnimation from 'common/fade/FadeAnimation' //动画组件
 export default {
   name: "DetailBanner",
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   data() {
     return {

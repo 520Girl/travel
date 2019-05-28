@@ -15,11 +15,11 @@
  
 <script>
 export default {
-  name: "CommonGallay ",
+  name: "CommonGallay",
   props: {
     imgs: {
       type: Array,
-      default() {
+      default() {//默认值 ,没传的时候
         return ['http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg', 'http://img1.qunarzz.com/sight/p0/1902/f8/f855cec6c668dc6da3.water.jpg_r_800x800_de16e94a.jpg']
       }
     }

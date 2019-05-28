@@ -32,43 +32,6 @@ export default {
   },
   data() {
     return {
-      recommendLists: [{
-        id: "0001",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }, {
-        id: "0002",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }, {
-        id: "0003",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }, {
-        id: "0004",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }, {
-        id: "0005",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }, {
-        id: "0006",
-        imgUrl: "http://img1.qunarzz.com/sight/p0/1806/e7/e74b5f08f7c7ee9fa3.water.jpg_200x200_451e3e02.jpg",
-        content: "大连圣亚海洋公园",
-        syno: "浪漫大连首都,",
-        price: "100",
-      }]
     }
   }
 }

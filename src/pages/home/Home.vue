@@ -60,7 +60,7 @@ export default {
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  activated() { //加入keep -alive多出来的生命周期函数
+  activated() { //加入keep -alive多出来的生命周期函数   但页面被重新激活时判断是否和上次页面相同不同再发一次ajax
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()

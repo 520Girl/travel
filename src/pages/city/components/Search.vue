@@ -26,9 +26,9 @@ export default {
   },
   methods: {
     handleCityClick(city) {
-      //this.$store.dispatch('changeCity', city)//改为 //排发一个changecity的active,然后了把city传过去
+      //this.$store.commit('changeCity', city)//改为 //排发一个changecity的方法给 Mutations,然后了把city传过去 vuex
       this.changeCity(city)
-      this.$router.push('/')//页面的挑战
+      this.$router.push('/')//页面的跳转
     },
     ...mapMutations(['changeCity'])
   },

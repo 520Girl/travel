@@ -19,5 +19,15 @@ export default new Router({
     path: '/detail/:id',
     name: 'Detail',
     component: Detail
-  }]
+  }],
+  scrollBehavior(to, from, savedPosition) { //解决切花页面是页面向下滑动的问题
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve({
+          x: 0,
+          y: 0
+        })
+      }, 10)
+    })
+  }
 })

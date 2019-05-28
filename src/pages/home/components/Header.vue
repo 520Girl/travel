@@ -15,7 +15,7 @@ export default {
   name: 'HomeHeader',
   computed: {
     ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
+    ...mapGetters(['doubleCity']) //这一句是对传过来的city进行了处理
   }
 }
 </script>

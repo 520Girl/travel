@@ -31,9 +31,9 @@ export default {
     }
   },
   methods: {
-    handleLetterClick(e) {//将值传给city 循环列表也就是list列表这是兄弟之间传值innerHTML也可以
-      this.$emit("change", e.target.innerText)
-      //console.log(e.target.innerText)
+    handleLetterClick(e) {//将值传给city 循环列表也就是list列表这是兄弟之间传值innerHTML也可以,点击会获取一个事件对象e
+      this.$emit("change", e.target.innerText) //目的给list传值,通过给父组件传值再通过父传给list,  或者用this.bus的方法直接传
+      //console.log(e.target.innerText)this.$emit()向外触发事件
     },
     handleTouchStart() {
       this.touchStatus = true
