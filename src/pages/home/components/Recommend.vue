@@ -39,11 +39,13 @@ export default {
 <style lang="scss" scoped>
 @import "~styles/mixin.scss";
 .wrapper {
+  box-sizing: border-box;
   width: 100%;
   color: #000000;
   font-size: 14px;
   .recommend-title {
     height: 0.8rem;
+    box-sizing: border-box;
     padding-left: 0.26rem;
     line-height: 0.8rem;
     font-weight: 700;
@@ -52,7 +54,7 @@ export default {
   .recommend-content {
     position: relative;
     width: 100%;
-    padding: 0.1rem;
+    padding: 0.1rem 0;
     display: inline-block;
 
     .recommend-left {
@@ -64,6 +66,7 @@ export default {
     }
     .recommend-right {
       overflow: hidden;
+      box-sizing: border-box;
       padding-left: 0.2rem;
       .right-content h5 {
         font-size: 0.32rem;

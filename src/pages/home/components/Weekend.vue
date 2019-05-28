@@ -37,6 +37,7 @@ export default {
   color: #000000;
   font-size: 14px;
   .recommend-title {
+    box-sizing: border-box;
     width: 100%;
     height: 0.8rem;
     padding-left: 0.26rem;
@@ -46,6 +47,7 @@ export default {
   }
   .recommend-content {
     .recommend-left {
+      box-sizing: border-box;
       padding-left: 0.1rem;
       padding-right: 0.1rem;
       overflow: hidden;

@@ -49,6 +49,7 @@ export default {
   }
 
   .item-chilren {
+    // box-sizing: border-box;
     padding: 0 0.2rem;
   }
   .content {

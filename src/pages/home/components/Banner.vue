@@ -5,8 +5,6 @@
         <img class="banner-img" :src="item.imgUrl" alt="" srcset="">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
-      <div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>
     </swiper>
   </div>
 </template>
@@ -20,8 +18,6 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination', //这是swiper上面的点
-        nextButton: ".swiper-button-next", //前进按钮的css选择器或HTML元素。
-        prevButton: ".swiper-button-prev",//后退按钮的css选择器或HTML元素。
         loop: true,
         autoplay: {
           delay: 8000,
