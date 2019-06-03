@@ -3,6 +3,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+// const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 module.exports = {
   dev: {
@@ -50,7 +51,7 @@ module.exports = {
     cssSourceMap: true
   },
 
-  build: {
+  build: {  //配置生成的文件名
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 
@@ -71,9 +72,21 @@ module.exports = {
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
-    productionGzip: false,
+    productionGzip: true, //gizp开启
     productionGzipExtensions: ['js', 'css'],
-
+    // plugins: [
+    //   new CompressionWebpackPlugin({
+    //     filename: '[path].gz[query]',
+    //     algorithm: 'gzip',
+    //     test: new RegExp(
+    //       '\\.(' +
+    //       config.build.productionGzipExtensions.join('|') +
+    //       ')$'
+    //     ),
+    //     threshold: 10240,
+    //     minRatio: 0.8
+    //   })
+    // ],
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:
     // `npm run build --report`
