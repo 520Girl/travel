@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>travel</title>
+    <script>
+        (function(){
+          function c(){
+            var deviceWidth = document.documentElement.clientWidth || document.body.clientWidth ;
+            var a,b;
+            deviceWidth>750 ? a=750 : a=deviceWidth
+            b= a/750*100;
+            document.getElementsByTagName('html')[0].style.fontSize=b + "px"
+          } 
+          c()
+          window.onresize =c;
+        })()
+      </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
