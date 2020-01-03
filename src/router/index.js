@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/pages/home/Home'
 import City from '@/pages/city/City'
 import Detail from '@/pages/detail/Detail'
+import Index from '@/pages/index/Index'
 
 Vue.use(Router)
 
@@ -20,7 +21,15 @@ export default new Router({
     path: '/detail/:id',
     name: 'Detail',
     component: Detail
+  }, {
+    path: '/index/',
+    name: 'Index',
+    component: Index
   }],
+
+
+
+  
   scrollBehavior(to, from, savedPosition) { //解决切花页面是页面向下滑动的问题
     return new Promise((resolve, reject) => {
       setTimeout(() => {
